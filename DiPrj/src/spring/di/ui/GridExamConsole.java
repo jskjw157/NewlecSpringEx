@@ -6,7 +6,9 @@ public class GridExamConsole implements ExamConsole {
 
 	private Exam exam;
 	
-	
+	public GridExamConsole() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	public GridExamConsole(Exam exam) {
 		
@@ -22,6 +24,13 @@ public class GridExamConsole implements ExamConsole {
 		 System.out.printf("弛   %3d  弛    %3.2f   弛\n", exam.total(), exam.avg());
 		System.out.println("戌式式式式式式式式式式扛式式式式式式式式式式戎");
 
+	}
+
+
+	@Override
+	public void setExam(Exam exam) {
+		this.exam =  exam;
+		
 	}
 
 }

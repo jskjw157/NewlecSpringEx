@@ -24,9 +24,13 @@ public class Program {
 		ApplicationContext context = 
 				new ClassPathXmlApplicationContext("spring/di/setting.xml");
 		
+		
 		//context.getBean에서 빈객체를 갖고올경우 객체형식으로 오기때문에 형변화를 해줘야된다.
 		//ExamConsole console = (ExamConsole) context.getBean("console");
 		
+		
+		Exam exam = context.getBean(Exam.class);
+		System.out.println(exam.toString());
 		
 		//자료형 가져오기 때문에 형변환을 할 필요가 없고, 일반적을 자주 쓰인다.
 		ExamConsole console = context.getBean(ExamConsole.class);
